@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import csv
 
-with open('word_list.csv', newline='') as f:
+with open('word_lists/word_list_by_frequency.csv', newline='') as f:
     reader = csv.reader(f)
     word_list = list(reader)
 for i in range(len(word_list)):
@@ -10,7 +10,7 @@ for i in range(len(word_list)):
 H_SIZE = 9*210
 V_SIZE = 9*297
 
-fnt = ImageFont.truetype('Hanzi-Pinyin-Font.top.ttf', 96)
+fnt = ImageFont.truetype('fonts/Hanzi-Pinyin-Font.top.ttf', 96)
 
 img = Image.new('RGB', (H_SIZE, V_SIZE), color = (255, 255, 255))
 d = ImageDraw.Draw(img)
